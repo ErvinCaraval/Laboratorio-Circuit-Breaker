@@ -1,0 +1,16 @@
+{
+    "name": "circuitbraker",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "node shoppingCartService.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.19.2",
+      "node-fetch": "^2.7.0",
+      "opossum": "^8.1.4"
+    }
+  }

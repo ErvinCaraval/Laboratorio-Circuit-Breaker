@@ -1,0 +1,24 @@
+services:
+  shopping-cart-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ervincaravaliibarra/cart-service:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - payment-service
+      - error-pages
+
+  payment-service:
+    image: tarampampam/error-pages:latest
+    environment:
+      ERROR_CODE: "500"  # Configure the error code to serve
+
+  error-pages:
+    image: tarampampam/error-pages:latest
+    environment:
+      TEMPLATE_NAME: "lost-in-space"
+      SHOW_DETAILS: "true"  # Ensure boolean values are passed as strings
+    ports:
+      - "8080:8080"
