@@ -13,7 +13,7 @@ app.get('/checkout', async (req, res) => {
     res.status(200).send(response);
   } catch (err) {
     // Redirigir al servicio de páginas de error
-    res.redirect('http://error/pages:8080/410.html'); // Cambiado a nombre de servicio
+    res.redirect('http://localhost:8080/410.html'); // Cambiado a nombre de servicio
   }
 });
 
