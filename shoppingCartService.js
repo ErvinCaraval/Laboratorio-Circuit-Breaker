@@ -5,7 +5,7 @@ const circuitBreaker = require('./paymentServiceCircuit');
 const app = express();
 app.use(bodyParser.json());
 
-app.post('/checkout', async (req, res) => {
+app.get('/checkout', async (req, res) => {
   const paymentDetails = req.body;
 
   try {
