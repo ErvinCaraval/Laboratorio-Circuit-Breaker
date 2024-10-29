@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 // Function to call the payment service
 async function makePayment(paymentDetails) {
-  const response = await fetch('http://payment-service/pay', {
+  const response = await fetch('http://payment-service:80/pay', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(paymentDetails),
