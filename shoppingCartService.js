@@ -12,7 +12,7 @@ app.get('/checkout', async (req, res) => {
     const response = await circuitBreaker.fire(paymentDetails);
     res.status(200).send(response);
   } catch (err) {
-    res.redirect('http://error-pages:8080/410.html');
+    res.redirect('http://localhost:8080/410.html');
   }
 });
 
